@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DRINLL MASIN MARK ENA</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='oswald.css' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="./loginStyle.css">
+  	<link rel="stylesheet" type="text/css" href="./signupStyle.css">
+  	<script type="text/javascript" src="./javascript/sha512.js"></script>
+  	<script src="./javascript/jquery.min.js"></script>
+  	<script src="./bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	function login () {
+		var send = "ok";
+		var username = $('#uname').val();
+		var name = $('#name').val();
+		var surname = $('#surname').val();
+		var email = $('#email').val();
+		var gender = $('#gender').val();
+		var password = sha512($('#password').val());
+		var cpassword = sha512($('#cpassword').val());
+		if(password != cpassword){
+			alert("Password error");
+			return;
+		}
+		//alert(username+"\n"+name+"\n"+surname+"\n"+email+"\n"+gender+"\n"+password+"\n"+cpassword);
+		//alert(password);
+		$.post("./php/signup.php",{sender:send,Username:username,Password:password,Name:name,Surname:surname,Email:email,Gender:gender},function(result) {
+			if(result=="OK"){
+				alert("registered");
+				//window.location.replace("noter.html");
+			}else{
+				alert(result);
+			}
+		});
+	}
+	</script>
+	<div class="container-fluid">
+		<div id="topBar" class="row">
+			<div class="col-xs-12">
+				<center><h2>DRINK MACHINE</h2></center>
+			</div>
+		</div>
+
+		<div id="content" class="row">
+			<center>
+				<form onsubmit="login();">
+				<div class="row in">
+						<div class="col-xs-12">
+							<input class type="text" id="uname" placeholder="Username">
+						</div>
+					</div>
+					<div class="row in">
+						<div class="col-xs-12">
+							<input class type="text" id="name" placeholder="Name">
+						</div>
+					</div>
+					<div class="row in">
+						<div class="col-xs-12">
+							<input class type="text" id="surname" placeholder="Surname">
+						</div>
+					</div>
+					<div class="row in">
+						<div class="col-xs-12">
+							<input class type="email" id="email" placeholder="e-Mail">
+						</div>
+					</div>
+					<div class="row in">
+						<div class="col-xs-12 in">
+							<div class="styled-select">
+								<select id="gender">
+								    <option value="M" >M</option>
+								    <option value="F">F</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row in">
+						<div class="col-xs-12">
+							<input class type="password" id="password" placeholder="Password">
+						</div>
+					</div>
+					<div class="row in">
+						<div class="col-xs-12">
+							<input class type="password" id="cpassword" placeholder="Confirm password">
+						</div>
+					</div>
+					<div class="row in">
+						<div class="col-xs-12">
+							<input type="submit" id="sender" lass="in" value="Sign up">
+						</div>
+					</div>
+				</form>
+			</center>
+		</div>
+
+	</div>
+</body>
+</html>

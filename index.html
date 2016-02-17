@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DRINLL MASIN MARK ENA</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='oswald.css' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="./loginStyle.css">
+  	<script type="text/javascript" src="./javascript/sha512.js"></script>
+  	<script src="./javascript/jquery.min.js"></script>
+  	<script src="./bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	function login () {
+		var send = "ok";
+		var username = $('#usern').val();
+		var password = sha512($('#passf').val());
+		//alert(password);
+		$.post("./php/login.php",{sender:send,Username:username,Password:password},function(result) {
+			if(result=="LOGIN OK"){
+				window.location.replace("noter.html");
+			}else{
+				//DODAT PASSWORD ZGRESENA
+			}
+		});
+	}
+	</script>
+	<div class="container-fluid">
+		<div id="topBar" class="row">
+			<div class="col-xs-12">
+				<center><h2>DRINK MACHINE</h2></center>
+			</div>
+		</div>
+		<div id="content" class="row">
+			<div class="col-xs-12">
+				<center>
+					<img id="logo" src="logo.jpg">
+					<!--
+						./php/login.php
+					-->
+					<form id="loginForm" onsubmit="login();" method="POST" action="#">
+						<input class type="text" id="usern" name="Username" placeholder="Username"><br></p>
+						<input type="password" id="passf" name="Password" placeholder="Password"><br></p>
+						<input type="submit" name="sender" value="Submit"><br>
+						<div id="newAccount">
+							<a href="./signup.html">NEW</a>
+						</div>
+						
+					</form>
+				</center>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

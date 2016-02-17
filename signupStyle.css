@@ -1,0 +1,32 @@
+
+
+#content{
+	/*ADD BROWSER COMPATIBILITY*/
+	height: -webkit-calc(100% - 90px);
+	width: -webkit-calc(100% + 15px);
+	margin-right: 0px;
+	margin-left: -15px;
+	margin-top: 90px;
+	/*
+	background: url("logo.jpg") 50% 20% no-repeat;
+	background-size: 60% auto;*/
+}
+
+.in{
+	margin-top: 10px;
+}
+
+.styled-select select {
+   background: transparent;
+   width: 30px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: none;
+   border-bottom: solid 2px #c9c9c9;
+   height: 34px;
+   -webkit-appearance: none;
+   outline: none;
+   text-align: center;
+   color: #A9A9A9;	
+}
