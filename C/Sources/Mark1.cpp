@@ -1,22 +1,22 @@
-#include "../Headers/Inebriator.h"
+#include "../Headers/Mark1.h"
 
-Inebriator::Inebriator(const char* serialPort,int baud):Arduino(serialPort,baud){
+Mark1::Mark1(const char* serialPort,int baud):Arduino(serialPort,baud){
     pipeNumber = 6;
     pumpNumber = 6;
     pipeStatus = (bool *)malloc(6*sizeof(bool));
     pumpStatus = (bool *)malloc(6*sizeof(bool));
 }
 
-Inebriator::Inebriator(const char* serialPort,int baud,int pipe,int pump):Arduino(serialPort,baud){
+Mark1::Mark1(const char* serialPort,int baud,int pipe,int pump):Arduino(serialPort,baud){
     pipeNumber = pipe;
     pumpNumber = pump;
     pipeStatus = (bool *)malloc(pipe*sizeof(bool));
     pumpStatus = (bool *)malloc(pump*sizeof(bool));
 }
 
-void Inebriator::setPump(int pos,bool status){
+void Mark1::setPump(int pos,bool status){
     if(pos<0 || pos >= pumpNumber){
-        throw "Inebriator:setPump Wrong position";
+        throw "Mark1:setPump Wrong position";
     }
     pos += 8;
     sendByte(pos);
@@ -29,9 +29,9 @@ void Inebriator::setPump(int pos,bool status){
     flush();
 }
 
-void Inebriator::setPipe(int pos,bool status){
+void Mark1::setPipe(int pos,bool status){
     if(pos<0 || pos >= pipeNumber){
-        throw "Inebriator:setPipe Wrong position";
+        throw "Mark1:setPipe Wrong position";
     }
     pos +=2;
     sendByte(pos);
@@ -44,10 +44,18 @@ void Inebriator::setPipe(int pos,bool status){
     flush();
 }
 
-bool Inebriator::getPump(int pos){
+bool Mark1::getPump(int pos){
     return pumpStatus[pos];
 }
 
-bool Inebriator::getPipe(int pos){
+bool Mark1::getPipe(int pos){
     return pipeStatus[pos];
+}
+
+void Mark1::moveOn(int pos){
+    printf("Moving on %d\n",pos);
+}
+
+int Mark1::getPosition(){
+    return 1;
 }

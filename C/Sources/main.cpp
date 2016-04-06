@@ -1,8 +1,9 @@
-#include "../Headers/Inebriator.h"
+#include "../Headers/Mark1.h"
+#include "../Headers/Machine.h"
 #include <unistd.h>
 
 int main(void){
-    Inebriator* dev = new Inebriator("/dev/ttyACM0",9600);
+    Mark1* dev = new Mark1("/dev/ttyACM0",9600);
     printf("Init ok\n");
     dev->setPump(2,true);
     usleep(35000000);
