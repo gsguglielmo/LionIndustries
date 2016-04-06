@@ -11,7 +11,6 @@ private:
     bool* pumpStatus;
     unsigned int pipeNumber;
     unsigned int pumpNumber;
-    int a;
 public:
     Inebriator(const char* serialPort,int baud);
     Inebriator(const char* serialPort,int baud,int pipe,int pump);
