@@ -1,0 +1,1 @@
+g++ -Wall -O -o mark ./Sources/*.cpp ./Sources/*.c `mysql_config --cflags --libs` -w -lcryptopp
