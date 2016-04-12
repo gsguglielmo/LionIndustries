@@ -10,5 +10,4 @@ int main(void){
     dev->setPump(2,true);
     usleep(35000000);
     dev->setPump(2,false);
-    
 }
