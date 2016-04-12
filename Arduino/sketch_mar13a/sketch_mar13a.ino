@@ -11,8 +11,8 @@ void setup() {
     digitalWrite(i, LOW);
   }
   digitalWrite(A0, LOW);
-  digitalWrite(A1, LOW);
-  digitalWrite(A2, LOW);
+  digitalWrite(A1, HIGH);
+  digitalWrite(A2, HIGH);
 
 }
 
@@ -43,8 +43,8 @@ void loop() {
         digitalWrite(A1,LOW);
         digitalWrite(A2,HIGH);
       }else if( a == 0x53){ // S - Stop
-        digitalWrite(A1,LOW);
-        digitalWrite(A2,LOW);
+        digitalWrite(A1,HIGH);
+        digitalWrite(A2,HIGH);
       }
     }
   }

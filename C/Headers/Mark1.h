@@ -13,6 +13,9 @@ private:
     bool* pumpStatus;
     unsigned int pipeNumber;
     unsigned int pumpNumber;
+    void left();
+    void right();
+    void stop();
 public:
     Mark1(const char* serialPort,int baud);
     Mark1(const char* serialPort,int baud,int pipe,int pump);

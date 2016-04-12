@@ -53,7 +53,29 @@ bool Mark1::getPipe(int pos){
 }
 
 void Mark1::moveOn(int pos){
+    if(pos == 0){
+        left();
+    }else if (pos == 1){
+        right();
+    }else if(pos == 2){
+        stop();
+    }
     printf("Moving on %d\n",pos);
+}
+
+void Mark1::left(){
+    sendByte(0x4c);
+    sendByte(0x4d);
+}
+
+void Mark1::right(){
+    sendByte(0x52);
+    sendByte(0x4d);
+}
+
+void Mark1::stop(){
+    sendByte(0x53);
+    sendByte(0x4d);
 }
 
 int Mark1::getPosition(){

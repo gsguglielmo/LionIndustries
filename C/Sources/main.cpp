@@ -4,10 +4,16 @@
 #include <unistd.h>
 
 int main(void){
-    //Machine* dev = new Mark1("/dev/ttyACM0",9600);
-    Machine* dev = new VirtualMachine(6,6);
+    Machine* dev = new Mark1("/dev/ttyACM1",9600);
+    //Machine* dev = new VirtualMachine(6,6);
     printf("Init ok\n");
-    dev->setPump(2,true);
-    usleep(35000000);
-    dev->setPump(2,false);
+    usleep(5000000);
+    dev->moveOn(0);
+    usleep(1000000);
+    dev->moveOn(2);
+    usleep(1000000);
+    dev->moveOn(1);
+    usleep(1000000);
+    
+    dev->moveOn(2);
 }
