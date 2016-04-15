@@ -11,7 +11,6 @@ public:
     //  int getNeedsNum();
     int getID();
     String* getName();
-    
     void addNeed(Need* need);
     void setID(int id);
     void setName(String* name);
