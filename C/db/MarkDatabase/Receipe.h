@@ -8,7 +8,7 @@ class Receipe{
 public:
     Receipe();
     Need* getNeed();
-    int getNeedsNum();
+    //  int getNeedsNum();
     int getID();
     String* getName();
     
