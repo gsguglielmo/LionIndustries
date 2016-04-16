@@ -15,6 +15,9 @@ public:
 private:
     Queue* inElaboration;
     bool status;
+    
+    Queue* buildNextElement();
+    
 };
 
 #endif
