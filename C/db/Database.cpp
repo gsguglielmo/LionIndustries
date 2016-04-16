@@ -5,8 +5,9 @@ Database::Database(const char address[],const char username[],const char passwor
     DEBUG(("[Database]:[Database]=>Initializing database\n"));
     mysql_init(this->mysql);
     DEBUG(("[Database]:[Database]=>Database initialized\n"));
-    if( !mysql_real_connect(this->mysql,address,username,password,database,0,NULL,0) ){
+    if( !mysql_real_connect(this->mysql,address,username,password,database,0,"/opt/lampp/var/mysql/mysql.sock",0) ){
         DEBUG(("[Database]:[Database]=>Connection failed\n"));
+        DEBUG(("[Database]:[Database]=>Error:%s\n",mysql_error(this->mysql)));
         throw 0x01;
     }
     DEBUG(("[Database]:[Database]=>Successfully connected\n"));
@@ -24,14 +25,12 @@ Table* Database::query(const char query[]){
     Table* table = new Table();
     if(result==NULL){
         if(mysql_errno(mysql)==0){
-            Row* newRow = new Row();
             DEBUG(("[Database]:[query]=>Query execution successfully\n"));
-            String* s = new String("Query successfully executed");
-            newRow->add(s);
-            table->add(newRow);
+            table->setEmpty(true);
             return table;
         }
     }
+    table->setEmpty(false);
     DEBUG(("[Database]:[query]=>Query execution successfully\n"));
     int fields = mysql_num_fields(result);
     int rows = mysql_num_rows(result);

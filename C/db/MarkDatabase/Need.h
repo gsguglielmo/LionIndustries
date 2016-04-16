@@ -9,15 +9,15 @@ public:
     Need();
     
     Ingredient* getIngredient();
-    float getQTY();
+    int getQTY();
     Need* getNext();
     
     void setIngredient(Ingredient* ingredient);
-    void setQTY(float qty);    
+    void setQTY(int qty);    
     void setNext(Need* next);
 private:
     Ingredient* ingredient;
-    float qty;
+    int qty;
     Need* next;
 };
 

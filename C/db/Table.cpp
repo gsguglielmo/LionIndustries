@@ -31,3 +31,11 @@ void Table::izpisiVse(){
     }
 }
 
+void Table::setEmpty(bool status){
+    empty = status;
+}
+
+bool Table::isEmpty(){
+    return empty;
+}
+

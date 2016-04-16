@@ -2,8 +2,8 @@
 #define MarkDatabase_h
 
 #include "Database.h"
-#include "Queue.h"
-
+#include "MarkDatabase/Queue.h"
+#include <stdlib.h>
 
 class MarkDatabase : private Database{
 public:
@@ -17,7 +17,8 @@ private:
     bool status;
     
     Queue* buildNextElement();
-    
+    Receipe* buildReceipe(String* receipeName);
+    Ingredient* buildIngredient(String* ingredientName);
 };
 
 #endif

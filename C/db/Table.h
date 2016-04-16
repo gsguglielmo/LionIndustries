@@ -15,8 +15,11 @@ public:
     Row* get(unsigned int element);
     unsigned int getSize();
     void izpisiVse();
+    void setEmpty(bool status);
+    bool isEmpty();
 private:   
     Row** vrstice;
+    bool empty;
     unsigned int size;
 };
 

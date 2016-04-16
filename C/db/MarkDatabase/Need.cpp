@@ -10,7 +10,7 @@ Ingredient* Need::getIngredient(){
     return ingredient;
 }
 
-float Need::getQTY(){
+int Need::getQTY(){
     return qty;
 }
 
@@ -22,7 +22,7 @@ void Need::setIngredient(Ingredient* ingredient){
     this->ingredient = ingredient;
 }
 
-void Need::setQTY(float qty){
+void Need::setQTY(int qty){
     this->qty = qty;
 }
 
