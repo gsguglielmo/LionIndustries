@@ -3,7 +3,7 @@
 Queue::Queue(){
     ID = 0;
     userID = 0;
-    nomeRicetta = NULL;
+    receipe = NULL;
 }
 
 int Queue::getID(){
@@ -14,8 +14,8 @@ int Queue::getUserID(){
     return userID;
 }
 
-String* Queue::getReceipeName(){
-    return nomeRicetta;
+Receipe* Queue::getReceipe(){
+    return receipe;
 }
 
 void Queue::setID(int id){
@@ -26,6 +26,6 @@ void Queue::setUserID(int id){
     userID = id;
 }
 
-void Queue::setReceipeName(String* receipe){
-    nomeRicetta = receipe;
+void Queue::setReceipe(Receipe* receipe){
+    this->receipe = receipe;
 }

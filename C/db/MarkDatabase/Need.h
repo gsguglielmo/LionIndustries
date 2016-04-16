@@ -2,20 +2,21 @@
 #define Needs_h
 
 #include "../String.h"
+#include "Ingredient.h"
 
 class Need{
 public:
     Need();
     
-    String* getIngredient();
+    Ingredient* getIngredient();
     float getQTY();
     Need* getNext();
     
-    void setIngredient(String* ingredient);
+    void setIngredient(Ingredient* ingredient);
     void setQTY(float qty);    
     void setNext(Need* next);
 private:
-    String* ingredient;
+    Ingredient* ingredient;
     float qty;
     Need* next;
 };

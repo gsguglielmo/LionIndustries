@@ -6,7 +6,7 @@ Need::Need(){
     next = NULL;
 }
 
-String* Need::getIngredient(){
+Ingredient* Need::getIngredient(){
     return ingredient;
 }
 
@@ -18,7 +18,7 @@ Need* Need::getNext(){
     return next;
 }
 
-void Need::setIngredient(String* ingredient){
+void Need::setIngredient(Ingredient* ingredient){
     this->ingredient = ingredient;
 }
 

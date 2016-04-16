@@ -2,21 +2,22 @@
 #define Queue_h
 
 #include "../String.h"
+#include "Receipe.h"
 
 class Queue{
 public:
     Queue();
     int getID();
     int getUserID();
-    String* getReceipeName();
+    Receipe* getReceipe();
     
     void setID(int id);
     void setUserID(int id);
-    void setReceipeName(String* receipe);
+    void setReceipe(Receipe* receipe);
 private: 
     int ID;
     int userID;
-    String* nomeRicetta;
+    Receipe* receipe;
 };
 
 
