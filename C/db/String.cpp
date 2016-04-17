@@ -77,3 +77,16 @@ char* String::getString(){
     tmp[i] = '\0';
     return tmp;
 }
+
+bool String::compare(String* s){
+    if(this->getLength() != s->getLength()){
+        return false;
+    }
+    int i;
+    for(i=0;i<this->getLength();i++){
+        if(charAt(i) != s->charAt(i)){
+            return false;
+        }
+    }
+    return true;
+}

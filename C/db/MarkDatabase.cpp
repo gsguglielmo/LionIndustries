@@ -110,3 +110,19 @@ void MarkDatabase::setNotCompleted(){
     setStatus(3);
     status = false;
 }
+
+void MarkDatabase::updateQty(Need* need){
+    int qty = need->getQTY();
+    String* ingredient = need->getIngredient()->getName();
+    char tmp[12];
+    sprintf(tmp,"%d",qty);
+    String* q = new String("UPDATE ingredients SET RemainingQTY=RemainingQTY-");
+    q->concatenate(new String(tmp));
+    q->concatenate(new String(" WHERE Name='"));
+    q->concatenate(ingredient);
+    q->concatenate(new String("'"));
+    Table* t = query(q->getString());
+    if(t == NULL){
+        throw 0x11; //Napaka
+    }
+}

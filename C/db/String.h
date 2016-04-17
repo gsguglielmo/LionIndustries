@@ -16,6 +16,7 @@ public:
     void setChar(char newChar,int position);
     void concatenate(String* s);
     char* getString();
+    bool compare(String* s);
     void toString();
 private:
       char* string;

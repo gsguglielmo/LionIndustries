@@ -12,6 +12,7 @@ public:
     void setCompleted();
     void setNotCompleted();
     bool isCompleted();
+    void updateQty(Need* need);
 private:
     Queue* inElaboration;
     bool status;
