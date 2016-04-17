@@ -39,6 +39,7 @@ int main(void){
             printf("ID=%d\nMID=%d\nName=%s\nPos=%d\nFQTY=%d\nRQTY=%d\n",ing->getID(),ing->getMachineID(),ing->getName()->getString(),ing->getPosition(),ing->getFullQTY(),ing->getRemainingQTY());
             
         }
+        data->setNotCompleted();
     }catch(int a){
         printf("Returned %d\n",a);
     }

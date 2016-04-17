@@ -15,7 +15,7 @@ public:
 private:
     Queue* inElaboration;
     bool status;
-    
+    void setStatus(int status);
     Queue* buildNextElement();
     Receipe* buildReceipe(String* receipeName);
     Ingredient* buildIngredient(String* ingredientName);
