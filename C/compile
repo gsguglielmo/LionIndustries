@@ -1,1 +1,1 @@
-g++ -Wall -O -o mark ./Sources/*.cpp ./Sources/*.c ./db/MarkDatabase/*.cpp ./db/*.cpp `mysql_config --cflags --libs` -w -lcryptopp
+g++ -Wall -O -o mark ./Sources/*.cpp ./Sources/*.c ./db/MarkDatabase/*.cpp ./db/*.cpp `mysql_config --cflags --libs` -w -lncurses

@@ -78,6 +78,20 @@ char* String::getString(){
     return tmp;
 }
 
+void String::addChar(char newChar){
+    size ++;
+    this->string = (char*)realloc(string,size*sizeof(char));
+    string[size-1] = newChar;
+}
+
+void String::removeChar(){
+    if(size==0){
+        return;
+    }
+    size--;
+    this->string = (char*)realloc(string,size*sizeof(char));
+}
+
 bool String::compare(String* s){
     if(this->getLength() != s->getLength()){
         return false;

@@ -13,6 +13,8 @@ public:
     ~String();
     int getLength();
     char charAt(int position);
+    void addChar(char newChar);
+    void removeChar();
     void setChar(char newChar,int position);
     void concatenate(String* s);
     char* getString();

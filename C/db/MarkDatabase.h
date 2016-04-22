@@ -7,13 +7,14 @@
 
 class MarkDatabase : private Database{
 public:
-    MarkDatabase(const char address[],const char username[],const char password[]);   
+    MarkDatabase(const char address[],const char username[],const char password[],const char database[]);   
     Queue* getNext();
     void setCompleted();
     void setNotCompleted();
     bool isCompleted();
     void updateQty(Need* need);
 private:
+    String* machineID;
     Queue* inElaboration;
     bool status;
     void setStatus(int status);

@@ -3,6 +3,7 @@
 
 #include "../db/String.h"
 #include <stdio.h>
+#include <curses.h>
 
 class Config{
 public:
@@ -19,7 +20,12 @@ public:
     int getMachineID();
     
 private:
+    int nextPos(int pos);
+    int previousPos(int pos);
     void save();
+    void buildGUI();
+    void changePosition();
+    String* posToString(int pos);
     void updateParameter(String* name,String* value);
     String* configPath;
     String* databaseAddress;

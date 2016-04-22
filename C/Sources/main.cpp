@@ -7,17 +7,24 @@
 #include "../Headers/Config.h"
 #include <unistd.h>
 
-int main(void){
+int main(int argc,char* argv[]){
     Config* conf = new Config(new String("config.conf"));
+    if(argc == 2){
+        if(strcmp(argv[1],"--config")==0){
+            conf->change();
+            return 0;
+        }
+    }
+    /*
     printf("Path=%s\n",conf->getPath()->getString());
     printf("Address=%s\n",conf->getDatabaseAddress()->getString());
     printf("Username=%s\n",conf->getDatabaseUsername()->getString());
     printf("Password=%s\n",conf->getDatabasePassword()->getString());
     printf("Name=%s\n",conf->getDatabaseName()->getString());
     printf("Device=%s\n",conf->getDevice()->getString());
-    printf("Machine=%d\n",conf->getMachineID());
+    printf("Machine=%d\n",conf->getMachineID());*/
     /*
-    Machine* dev = new Mark1("/dev/ttyACM0",9600);
+    Machine* dev = new Mark1(conf->getDevice()->getString(),9600);
     //Machine* dev = new VirtualMachine(6,6);
     printf("Init ok\n");
     usleep(5000000);
@@ -33,8 +40,7 @@ int main(void){
     usleep(2000000); 
     dev->moveOn(2);   
     */
-    /*
-    MarkDatabase* data = new MarkDatabase("localhost","inebriator","a53DGCY3qcE5vpyE");
+    MarkDatabase* data = new MarkDatabase(conf->getDatabaseAddress()->getString(),conf->getDatabaseUsername()->getString(),conf->getDatabasePassword()->getString(),conf->getDatabaseName()->getString());
     try{
         
         Queue* next = data->getNext();
@@ -49,9 +55,8 @@ int main(void){
             need = tmp->getNeed();
             printf("ID=%d\nMID=%d\nName=%s\nPos=%d\nFQTY=%d\nRQTY=%d\n",ing->getID(),ing->getMachineID(),ing->getName()->getString(),ing->getPosition(),ing->getFullQTY(),ing->getRemainingQTY());
         }
-        data->setNotCompleted();
+        data->setCompleted();
     }catch(int a){
         printf("Returned %d\n",a);
     }
-    */
 }

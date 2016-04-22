@@ -1,8 +1,11 @@
 #include "MarkDatabase.h"
 
-MarkDatabase::MarkDatabase(const char address[],const char username[],const char password[]):Database(address,username,password,"Inebriator"){
+MarkDatabase::MarkDatabase(const char address[],const char username[],const char password[],const char database[]):Database(address,username,password,database){
     inElaboration = NULL;
     status = false;
+    char tmp[10];
+    sprintf(tmp,"%d",machineID);
+    this->machineID = new String(tmp);
 }
 
 Queue* MarkDatabase::getNext(){
