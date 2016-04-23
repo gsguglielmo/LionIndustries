@@ -82,6 +82,8 @@ Ingredient* MarkDatabase::buildIngredient(String* ingredientName){
     ingredient->setPosition(atoi(row->get(3)->getString()));
     ingredient->setFullQTY(atoi(row->get(4)->getString()));
     ingredient->setRemainingQTY(atoi(row->get(5)->getString()));
+    ingredient->setLoadTime(atoi(row->get(6)->getString()));
+    ingredient->setDropTime(atoi(row->get(7)->getString()));
     return ingredient;
 }
 

@@ -2,7 +2,7 @@
 #define Database_h
 
 //DEBUG
-#if 1
+#if 0
 #define DEBUG(a) printf a
 #else
 #define DEBUG(a) (void) a

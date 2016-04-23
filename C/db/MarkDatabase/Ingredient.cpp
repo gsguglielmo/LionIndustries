@@ -33,6 +33,14 @@ void Ingredient::setRemainingQTY(int qty){
     this->remainingQTY = qty;
 }
 
+void Ingredient::setLoadTime(int load){
+    loadTime = load;
+}
+
+void Ingredient::setDropTime(int drop){
+    dropTime = drop;
+}
+
 int Ingredient::getID(){
     return ID;
 }
@@ -55,4 +63,12 @@ int Ingredient::getFullQTY(){
 
 int Ingredient::getRemainingQTY(){
     return remainingQTY;
+}
+
+int Ingredient::getLoadTime(){
+    return loadTime;
+}
+
+int Ingredient::getDropTime(){
+    return dropTime;
 }

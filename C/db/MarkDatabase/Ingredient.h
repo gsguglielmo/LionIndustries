@@ -12,6 +12,8 @@ public:
     void setPosition(int position);
     void setFullQTY(int qty);
     void setRemainingQTY(int qty);
+    void setLoadTime(int load);
+    void setDropTime(int drop);
     
     int getID();
     int getMachineID();
@@ -19,6 +21,8 @@ public:
     int getPosition();
     int getFullQTY();
     int getRemainingQTY();
+    int getLoadTime();
+    int getDropTime();
 private:
     int ID;
     int machineID;
@@ -26,6 +30,8 @@ private:
     int position;
     int fullQTY;
     int remainingQTY;
+    int loadTime;
+    int dropTime;
 };
 
 #endif
