@@ -4,6 +4,7 @@
 #include "Machine.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "Logger.h"
 
 class VirtualMachine: public Machine{
 private:
@@ -20,6 +21,7 @@ public:
     bool getPump(int pos);
     bool getPipe(int pos);
     int getPosition();
+    Logger* log;
 };
 
 #endif

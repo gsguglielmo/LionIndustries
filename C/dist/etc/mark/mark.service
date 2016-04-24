@@ -1,0 +1,7 @@
+[Unit]
+Description=Mark machine manager
+
+[Service]
+Type=simple
+ExecStart=/etc/mark/mark --start --demo
+

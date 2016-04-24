@@ -1,6 +1,6 @@
 #include "../Headers/Logger.h"
 
-FILE* Logger::log = NULL;
+String* Logger::logFile = NULL;
 bool Logger::status = false;
 int Logger::level = 1;
 
@@ -9,7 +9,7 @@ Logger::Logger(String* location){
 }
 
 void Logger::initDebugger(){
-    log = stdout;
+    logFile = NULL;
 }
 
 void Logger::initDebugger(String* logFile){
@@ -26,16 +26,50 @@ void Logger::stopDebugger(){
 }
 
 void Logger::debug(int level,char* format,...){
+    
     if(this->level>=level && status){
-        fprintf(log,"[%s]",location->getString());
+        FILE* log;
+        if(logFile == NULL){
+            log = stdout;
+        }else{
+            log = fopen(logFile->getString(),"a");
+            if(log == NULL){
+                throw 0x44;
+            }
+        }
+        fprintf(log,"[INFO][%d][%s]",level,location->getString());
         va_list arg;
         va_start(arg,format);
         vfprintf(log,format,arg);
         va_end(arg);
         fprintf(log,"\n");
+        if(logFile != NULL){
+            fclose(log);
+        }
     }
+    
 }
 
 void Logger::error(char* format,...){
+    
+    if(status){
+        FILE* log;
+        
+        if(logFile == NULL){
+            log = stdout;
+        }else{
+            log = fopen(logFile->getString(),"a");
+        }
+        fprintf(log,"[ERROR][%s]",location->getString());
+        va_list arg;
+        va_start(arg,format);
+        vfprintf(log,format,arg);
+        va_end(arg);
+        fprintf(log,"\n");
+        if(logFile != NULL){
+            fclose(log);
+        }
+        
+    }
     
 }

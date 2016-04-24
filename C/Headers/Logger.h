@@ -18,7 +18,6 @@ public:
 private:
     String* location;
     static String* logFile;
-    static FILE* log;
     static bool status;
     static int level;
 };

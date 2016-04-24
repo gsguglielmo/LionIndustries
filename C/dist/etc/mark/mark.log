@@ -1,0 +1,36 @@
+[INFO][1][Main]Deamon mode started
+[INFO][1][Main]Demo mode started
+[INFO][1][Main]Initializing
+[INFO][2][Main]Connectiong to Arduino
+[INFO][3][Main]Device=/dev/ttyACM0
+[INFO][3][Main]Baud=9600
+[INFO][2][Main]Connection to Arduino successfull
+[INFO][2][Main]Connectiong to Database
+[INFO][3][Main]Address=localhost
+[INFO][3][Main]Username=inebriator
+[INFO][3][Main]Password=a53DGCY3qcE5vpyE
+[INFO][3][Main]Database=Inebriator
+[INFO][2][Main]Connection to database successfull
+[INFO][3][VirtualMachine]Moving to position 0
+[INFO][1][Main]Initialized
+[INFO][1][Main]Waiting element
+[INFO][1][Main]Found element
+[INFO][2][Main]Queue id 1
+[INFO][2][Main]User id 1
+[INFO][2][Main]Receipe = Long island
+[INFO][3][Main]Ingredient=vodka
+[INFO][3][Main]Qty needed=80
+[INFO][3][Main]Load time=5000
+[INFO][3][Main]Drop time=10
+[INFO][3][VirtualMachine]Moving to position 1
+[INFO][3][VirtualMachine]Setting pipe 1 to 1
+[INFO][3][VirtualMachine]Setting pipe 1 to 0
+[INFO][3][Main]Ingredient=voda
+[INFO][3][Main]Qty needed=10
+[INFO][3][Main]Load time=5000
+[INFO][3][Main]Drop time=10
+[INFO][3][VirtualMachine]Moving to position 0
+[INFO][3][VirtualMachine]Setting pipe 0 to 1
+[INFO][3][VirtualMachine]Setting pipe 0 to 0
+[INFO][3][VirtualMachine]Moving to position 0
+[INFO][1][Main]Waiting element

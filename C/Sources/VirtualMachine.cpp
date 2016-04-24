@@ -5,6 +5,7 @@ VirtualMachine::VirtualMachine(int pipe,int pump){
     pumpNumber = pump;
     pipeStatus = (bool *)malloc(pipe*sizeof(bool));
     pumpStatus = (bool *)malloc(pump*sizeof(bool));
+    log = new Logger(new String("VirtualMachine"));
 }
 
 void VirtualMachine::setPump(int pos,bool status){
@@ -12,7 +13,7 @@ void VirtualMachine::setPump(int pos,bool status){
         throw 0x01;
     }
     pumpStatus[pos] = status;
-    printf("Setting pump %d to %d\n",pos,status);
+    log->debug(3,"Setting pump %d to %d",pos,status);
 }
 
 void VirtualMachine::setPipe(int pos,bool status){
@@ -20,12 +21,12 @@ void VirtualMachine::setPipe(int pos,bool status){
         throw 0x02;
     }
     pipeStatus[pos] = status;
-    printf("Setting pipe %d to %d\n",pos,status);
+    log->debug(3,"Setting pipe %d to %d",pos,status);
 }
 
 void VirtualMachine::moveOn(int pos){
     position = pos;
-    printf("Moving to position %d\n",pos);
+    log->debug(3,"Moving to position %d",pos);
 }
 
 bool VirtualMachine::getPump(int pos){
