@@ -6,8 +6,9 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	    <link href='../font/oswald.css' rel='stylesheet' type='text/css'>
 	    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,100' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
 	  	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-	  	<link rel="stylesheet" type="text/css" href="CSS/conto.css">
+	  	<link rel="stylesheet" type="text/css" href="CSS/coda.css">
 	  	<link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
 	  	<script src="../javascript/jquery.min.js"></script>
 	  	<script src="../bootstrap/js/bootstrap.min.js"></script>
@@ -17,10 +18,7 @@
 
 		<div class="container-fluid">
 			<div id="topBar" class="row">
-				<div class="queue col-xs-2">
-					<center>
-						<a href="">CODA</a>
-					</center>
+				<div class="col-xs-2">
 				</div>
 				<div class="col-xs-8">
 					<center>
@@ -30,26 +28,36 @@
 				<div class="col-xs-2">
 				</div>
 			</div>
-			<div id="content" class="row">
+			<div id="content">
 				<div id="logoCash">
 					<center>
-						<i class="fa fa-usd  fa-5x" aria-hidden="true"></i>
-						<h2>CONTO</h2>
-						<div id="line"></div>
+						<i class="fa fa-users  fa-5x" aria-hidden="true"></i>
+						<h2>CODA</h2>
+						<div class="line"></div>
 					</center>
 				</div>
-				<div id="cash">
+				<div id="queueNumber">
 					<center>
-						20.56€
+						<h3 id="queueTime">TEMPO D'ATTESA:</h3>
+						<h3 id="numberCocktail">5</h3>
+						<h3 id="cocktail">COCKTAIL</h3>
 					</center>
 				</div>
-				<div id="username">
-					<center>
-						ERIKBERLOT						
-					</center>
+				<div class="line"></div>
+				<div id="queueCocktail">
+						<!--cocktails-->
+						<div class="row cocktailDiv">
+							<div class="col-xs-10">
+								<h3>MALIBU COLA</h3>
+							</div>
+							<div class="col-xs-2">
+									<i class="info fa fa-info-circle fa-3x"></i>
+							</div>
+							
+						</div>
+						<!--cocktails-->
 				</div>
-				
-			</div>	
+			</div>
 		</div>
 	</body>
 </html>
