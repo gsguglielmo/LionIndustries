@@ -1,0 +1,103 @@
+/*
+ *	Website main colors
+ *	Background: black;
+ *	Items-color: #5E9FF6;
+ *	Shadow-1: #323232;
+ *	
+*/
+
+html,body,.container-fluid{
+	height: 100%;
+	padding: 0px;
+	background-color: #000;
+}
+
+#topBar{
+	position:fixed;
+	background-color:#5E9FF6;
+	/*ADD BROWSER COMPATIBILITY*/
+	-webkit-box-shadow: 0px 7px 10px #323232;
+	height: 60px;
+	width: 100%;
+	opacity: 0.8;
+	margin-top: 1.5%;
+	margin-left: 0px;
+	margin-right: 0px;
+	color: white;
+	text-shadow: 2px 2px #000;
+	font: bold;	
+	font-family: 'Oswald', sans-serif;
+	z-index: 2;
+}
+
+.queue{
+
+  margin-top: 15px;
+}
+
+.queue a{
+	text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+}
+
+.queue a:hover{
+    color: #323232;
+}
+
+#logo-field{
+	/*ADD BROWSER COMPATIBILITY*/
+	height: -webkit-calc(50% - 60px);
+	width: -webkit-calc(100% + 15px);
+	margin-right: 0px;
+	margin-left: -15px;
+	margin-top: 60px;
+}
+
+#logo{
+	margin-top: 60px;
+	width: 60%;
+	z-index: 1;
+}
+
+@media screen and (min-aspect-ratio: 16/9){
+	#logo{
+		margin-top: 50px;
+		width: 25%;
+		z-index: 1;
+	}
+}
+
+#content{
+	height: 100%;
+	width: 100%;
+	margin-right: 0px;
+	margin-left: -15px;
+	padding-top: -webkit-calc(5% + 60px);
+	color: #5E9FF6;
+	font-family: 'Oswald', sans-serif;
+}
+
+#line{
+	/*#cc66ff*/
+	border-top: solid #5E9FF6;
+	margin-left: 30px;
+	text-shadow: 2px 2px #323232;
+}
+
+#cash{
+	font-size: 8em;
+	margin-top: 10%;
+	color:#8c8c8c;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#username{
+	margin-top: 20%;
+	font-size: 2.5em;
+}
+
+
+
+
+
