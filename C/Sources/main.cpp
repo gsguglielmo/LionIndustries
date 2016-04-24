@@ -5,28 +5,41 @@
 #include "../db/MarkDatabase/Need.h"
 #include "../db/MarkDatabase/Receipe.h"
 #include "../Headers/Config.h"
+#include "../Headers/Logger.h"
 #include <unistd.h>
 
 int wait(int loadTime,int dropTime,int qty);
 
 int main(int argc,char* argv[]){
-    Config* conf = new Config(new String("config.conf"));
-    if(argc == 2){
-        if(strcmp(argv[1],"--config")==0){
-            conf->change();
-            return 0;
+    Config* conf = new Config(new String("/etc/mark/config.conf"));
+    FILE* log = stdout;
+    Logger* l = new Logger(new String("Main"));
+    l->initDebugger();
+    l->startDebugger(5);
+    if(argc > 1){
+        int i;
+        for(i=1;i<argc;i++){
+            if(strcmp(argv[i],"--config")==0){
+                l->debug(1,"Config mode");
+                conf->change();
+                return 0;
+            }
+            if(strcmp(argv[i],"--start")==0){
+                l->debug(1,"Deamon mode started");
+            }
         }
     }
     //  Machine* dev = new Mark1(conf->getDevice()->getString(),9600);
+    printf("OK");
     Machine* dev = new VirtualMachine(6,6);
     MarkDatabase* data = new MarkDatabase(conf->getDatabaseAddress()->getString(),conf->getDatabaseUsername()->getString(),conf->getDatabasePassword()->getString(),conf->getDatabaseName()->getString());
     while(true){
         try{
-            system("clear");
+            //system("clear");
             dev->moveOn(0);
             Queue* next = data->getNext();
             Receipe* tmp =next->getReceipe();
-            printf("Queue id %d\nUser id => %d\nReceipe => %s\n",next->getID(),next->getUserID(),tmp->getName()->getString());
+            fprintf(log,"Queue id %d\nUser id => %d\nReceipe => %s\n",next->getID(),next->getUserID(),tmp->getName()->getString());
             Need* need = tmp->getNeed();
             Ingredient* ing;
             while(need != NULL){
@@ -51,9 +64,9 @@ int main(int argc,char* argv[]){
             data->setCompleted();
         }catch(int a){
             if(a==1){
-                printf("Queue empty\n");
+                fprintf(log,"Queue empty\n");
             }else{
-                printf("Returned %d\n",a);
+                fprintf(log,"Returned %d\n",a);
             }
         }
         usleep(500000);
