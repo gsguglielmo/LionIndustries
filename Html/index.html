@@ -17,11 +17,13 @@
 		var send = "ok";
 		var username = $('#usern').val();
 		var password = sha512($('#passf').val());
+		password = sha512(password);
 		//alert(password);
 		$.post("./php/login.php",{sender:send,Username:username,Password:password},function(result) {
 			if(result=="LOGIN OK"){
-				window.location.replace("noter.html");
+				window.location.replace("pages/main.php");
 			}else{
+				alert(result);
 				//DODAT PASSWORD ZGRESENA
 			}
 		});
