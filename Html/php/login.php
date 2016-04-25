@@ -4,7 +4,6 @@
 		$username = $_POST['Username'];
 		$password = $_POST['Password'];
 		$connection = connect();
-		$connection = switchMain($connection);
 		$query = "SELECT ID FROM accounts WHERE Username='$username' AND Password='$password'";
 		$result = mysqli_query($connection,$query) or die("Error2");
 		$count = mysqli_num_rows($result);	

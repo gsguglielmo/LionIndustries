@@ -24,16 +24,16 @@
 		var password = sha512($('#password').val());
 		var cpassword = sha512($('#cpassword').val());
 		if(password != cpassword){
+			//Password nista enaki
 			alert("Password error");
 			return;
 		}
-		//alert(username+"\n"+name+"\n"+surname+"\n"+email+"\n"+gender+"\n"+password+"\n"+cpassword);
-		//alert(password);
 		$.post("./php/signup.php",{sender:send,Username:username,Password:password,Name:name,Surname:surname,Email:email,Gender:gender},function(result) {
 			if(result=="OK"){
+				//Se je uspel registrirat
 				alert("registered");
-				//window.location.replace("noter.html");
 			}else{
+				//Se ni uspel registrirat
 				alert(result);
 			}
 		});
