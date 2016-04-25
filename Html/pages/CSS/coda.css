@@ -16,11 +16,11 @@ html,body,.container-fluid{
 	position:fixed;
 	background-color:#5E9FF6;
 	/*ADD BROWSER COMPATIBILITY*/
-	-webkit-box-shadow: 0px 7px 10px #323232;
+	
 	height: 60px;
 	width: 100%;
-	opacity: 0.8;
-	margin-top: 1.5%;
+	/*opacity: 0.8;*/
+	margin-top: 10px;
 	margin-left: 0px;
 	margin-right: 0px;
 	color: white;
@@ -36,7 +36,7 @@ html,body,.container-fluid{
 	margin-right: 0px;
 	margin-left: -15px;
 	padding-top: -webkit-calc(5% + 60px);
-	color: #5E9FF6;
+	color: #9900ff;
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -49,6 +49,14 @@ html,body,.container-fluid{
 
 #queueNumber{
 	color: #e6e6e6;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #5E9FF6;
+	color:#fff;
+	text-shadow: 2px 2px #000;
 }
 
 #numberCocktail{
@@ -61,8 +69,8 @@ html,body,.container-fluid{
 	margin-bottom: 30px; 
 }
 
-#cocktailAttesa{
-	color: #e6e6e6;
+#cocktainAttesa{
+	color: #5E9FF6;
 }
 
 .cocktailDiv{
@@ -72,10 +80,8 @@ html,body,.container-fluid{
 	height: 60px;
 	background-color: #5E9FF6;
 	color: #e6e6e6;
-	box-shadow: 7px 7px 10px #323232;
 	text-align: left;
-	text-shadow: 0px 0px;
-	font-family: 'Just Another Hand', cursive;
+	text-shadow: 2px 2px #000;
 }
 
 .cocktailDiv h3{

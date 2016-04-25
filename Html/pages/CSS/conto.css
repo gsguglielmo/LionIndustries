@@ -16,11 +16,10 @@ html,body,.container-fluid{
 	position:fixed;
 	background-color:#5E9FF6;
 	/*ADD BROWSER COMPATIBILITY*/
-	-webkit-box-shadow: 0px 7px 10px #323232;
 	height: 60px;
 	width: 100%;
-	opacity: 0.8;
-	margin-top: 1.5%;
+	/*opacity: 0.8;*/
+	margin-top: 10px;
 	margin-left: 0px;
 	margin-right: 0px;
 	color: white;
@@ -74,7 +73,7 @@ html,body,.container-fluid{
 	margin-right: 0px;
 	margin-left: -15px;
 	padding-top: -webkit-calc(5% + 60px);
-	color: #5E9FF6;
+	color: #00cc44;
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -86,15 +85,31 @@ html,body,.container-fluid{
 }
 
 #cash{
-	font-size: 8em;
+	font-size: 7em;
 	margin-top: 10%;
-	color:#8c8c8c;
-	font-family: 'Josefin Sans', sans-serif;
+	margin-left: 30px;
+	background-color: #5E9FF6;
+	color:#fff;
+	text-shadow: 2px 2px #000;
+	height: 40%;
+	padding-top: 12%;
+	margin-bottom: 10%;
 }
 
 #username{
-	margin-top: 20%;
 	font-size: 2.5em;
+	color: #5E9FF6;
+}
+
+#usernameName{
+	margin-left: 30px;
+	margin-right: 0px;
+	margin-top: 15px;
+	height: 60px;
+	background-color: #5E9FF6;
+	color: #e6e6e6;
+	text-align: center;
+	text-shadow: 2px 2px #000;
 }
 
 
