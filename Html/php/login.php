@@ -14,7 +14,7 @@
 				$token = randomKeyGen(100);
 				$query = "Update accounts SET Token='$token' WHERE Username='$username' OR Email='$username'";
 				mysqli_query($connection,$query);
-				$security = $username + $token + $row[0];
+				$security = $username.$token.$row[0];
 				$security = hash("sha512", $security);
 				session_start();
 				$_SESSION["Username"]=$username;

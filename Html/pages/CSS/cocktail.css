@@ -13,6 +13,7 @@ html,body,.container-fluid{
 	font-family: 'Oswald', sans-serif;
 }
 
+
 #topBar{
 	position:fixed;
 	background-color:#5E9FF6;
@@ -126,7 +127,7 @@ html,body,.container-fluid{
 	color: #323232;
 }
 
-#poput{
+.poput{
 	width: 90%;
 	height: -webkit-calc(90% - 60px);
 	z-index: 999;
@@ -142,10 +143,10 @@ html,body,.container-fluid{
 	overflow-x: hidden; 
 }
 
-#poput i{
+.poput i{
 	font-size: 1.5em;
 }
 
-#poput h3,h4{
+.poput h3,h4{
 	font-size: 30px;
 }

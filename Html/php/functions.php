@@ -20,7 +20,7 @@ function checkToken(){
 	$count = mysqli_num_rows($result);	
 	if($count == 1){
 		$row = mysqli_fetch_array($result);
-		$tmp = $username + $row[0] + $row[1];
+		$tmp = $username.$row[0].$row[1];
 		if( $security == hash("sha512", $tmp) ){
 			return true;
 		}else{
