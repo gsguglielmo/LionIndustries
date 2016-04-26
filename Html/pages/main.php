@@ -20,9 +20,11 @@ if( !checkToken() ){
 </head>
 <body>
 	<script type="text/javascript">
-		setInterval(function() {
-			authenticator();
-		},1000);
+		$(document).ready(function(){
+			setInterval(function() {
+				authenticator();
+			},1000);
+		});
 		function authenticator(){
 			$.post("../php/authenticator.php",{},function(result) {
 				if(result=="0"){
@@ -32,6 +34,9 @@ if( !checkToken() ){
 		};
 		function goToCocktail(){
 			window.location.replace("cocktail.php");
+		}
+		function goToAccount(){
+			window.location.replace("conto.php");
 		}
 	</script>
 	<div class="container-fluid">
@@ -70,7 +75,7 @@ if( !checkToken() ){
 	</div>
 	<div class="col-xs-6">
 		<center>
-			<div class="button conto">
+			<div class="button conto" onclick="goToAccount();">
 				<center>
 					<i class="fa fa-usd fa-5x"></i><br>
 					<p class="text">CONTO</p>
