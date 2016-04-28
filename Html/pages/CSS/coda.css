@@ -30,11 +30,24 @@ html,body,.container-fluid{
 	z-index: 2;
 }
 
+#scritta{
+	margin-top: 15px;
+}
+
+#freccia{
+	margin-top: 8px;
+	color: white;
+}
+
+#freccia:hover{
+	color: #cacaca;
+}
+
 #content{
 	height: 100%;
 	width: 100%;
 	margin-right: 0px;
-	margin-left: -15px;
+	margin-left: 0px;
 	padding-top: -webkit-calc(5% + 60px);
 	color: #9900ff;
 	font-family: 'Oswald', sans-serif;
@@ -42,8 +55,8 @@ html,body,.container-fluid{
 
 .line{
 	/*#cc66ff*/
+	width:-webkit-calc(100% - 30px);
 	border-top: solid #5E9FF6;
-	margin-left: 30px;
 	text-shadow: 2px 2px #323232;
 }
 
@@ -51,10 +64,11 @@ html,body,.container-fluid{
 	color: #e6e6e6;
 	margin-top: 10%;
 	margin-bottom: 10%;
-	margin-left: 30px;
+	margin-left: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color: #5E9FF6;
+	width:-webkit-calc(100% - 30px);
 	color:#fff;
 	text-shadow: 2px 2px #000;
 }
@@ -74,7 +88,8 @@ html,body,.container-fluid{
 }
 
 .cocktailDiv{
-	margin-left: 30px;
+	margin-left: 15px;
+	width:-webkit-calc(100% - 30px);
 	margin-right: 0px;
 	margin-top: 15px;
 	height: 60px;
