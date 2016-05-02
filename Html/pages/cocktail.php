@@ -11,7 +11,6 @@ if( !checkToken() ){
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link href='../font/oswald.css' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="CSS/cocktail.css">
 	<link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
