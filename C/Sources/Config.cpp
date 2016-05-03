@@ -103,7 +103,11 @@ void Config::changePosition(){
                 pos = previousPos(pos);
                 move(pos,12+posToString(pos)->getLength());
             break;
-            case 127:
+	    case KEY_LEFT:
+            break;
+	    case KEY_RIGHT:
+            break;
+            case KEY_BACKSPACE:
                 if(pos!=19){
                     posToString(pos)->removeChar();
                     move(pos,12+posToString(pos)->getLength());
@@ -114,8 +118,7 @@ void Config::changePosition(){
                     t->removeChar();
                     move(pos,12+t->getLength());
                     addstr(" ");
-                    move(pos,12+t->getLength());
-                    
+                    move(pos,12+t->getLength()); 
                     machineID = atoi(t->getString());
                 }
             break;
@@ -128,6 +131,7 @@ void Config::changePosition(){
                 save();
                 return;
             default:
+		//printf("%d\n",in);
                 if(pos!=19){
                     addch(in);
                     posToString(pos)->addChar(in);
