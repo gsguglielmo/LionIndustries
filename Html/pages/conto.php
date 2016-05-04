@@ -80,7 +80,7 @@ if( !checkToken() ){
 				<center>
 					<i class="fa fa-usd  fa-5x" aria-hidden="true"></i>
 					<h2>CONTO</h2>
-					<div id="line"></div>
+					<div class="line"></div>
 				</center>
 			</div>
 			<div id="cash">

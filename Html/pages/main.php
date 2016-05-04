@@ -48,7 +48,7 @@ if( !checkToken() ){
 			</div>
 			<div class="col-xs-8">
 				<center>
-					<h2>CLICK&DRINK</h2>
+					<h2 id="scritta">CLICK&DRINK</h2>
 				</center>
 			</div>
 			<div class="col-xs-2">

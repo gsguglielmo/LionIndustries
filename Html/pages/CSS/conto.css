@@ -53,15 +53,6 @@ html,body,.container-fluid{
     color: #323232;
 }
 
-#logo-field{
-	/*ADD BROWSER COMPATIBILITY*/
-	height: -webkit-calc(50% - 60px);
-	width: -webkit-calc(100% + 15px);
-	margin-right: 0px;
-	margin-left: -15px;
-	margin-top: 60px;
-}
-
 #logo{
 	margin-top: 60px;
 	width: 60%;
@@ -80,23 +71,24 @@ html,body,.container-fluid{
 	height: 100%;
 	width: 100%;
 	margin-right: 0px;
-	margin-left: -15px;
+	margin-left: 0px;
 	padding-top: -webkit-calc(5% + 60px);
 	color: #00cc44;
 	font-family: 'Oswald', sans-serif;
 }
 
-#line{
+.line{
 	/*#cc66ff*/
+	width:-webkit-calc(100% - 30px);
 	border-top: solid #5E9FF6;
-	margin-left: 30px;
 	text-shadow: 2px 2px #323232;
 }
 
 #cash{
+	width:-webkit-calc(100% - 30px);
 	font-size: 7em;
 	margin-top: 10%;
-	margin-left: 30px;
+	margin-left: 15px;
 	background-color: #5E9FF6;
 	color:#fff;
 	text-shadow: 2px 2px #000;
@@ -111,8 +103,8 @@ html,body,.container-fluid{
 }
 
 #usernameName{
-	margin-left: 30px;
-	margin-right: 0px;
+	width:-webkit-calc(100% - 30px);
+	margin-left: 15px;
 	margin-top: 15px;
 	height: 60px;
 	background-color: #5E9FF6;
@@ -120,8 +112,3 @@ html,body,.container-fluid{
 	text-align: center;
 	text-shadow: 2px 2px #000;
 }
-
-
-
-
-

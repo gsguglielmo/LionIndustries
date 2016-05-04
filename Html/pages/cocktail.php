@@ -85,25 +85,31 @@ if( !checkToken() ){
 
 	<div class="container-fluid">
 		<div id="topBar" class="row">
-			<div class="col-xs-2">
-				<a href="">
-					<i class="fa fa-arrow-left fa-3x" id="freccia" aria-hidden="true"></i>
-				</a>
-			</div>
-			<div class="col-xs-8">
-				<center>
-					<h2 id="scritta">CLICK&DRINK</h2>
-				</center>
-			</div>
-			<div class="col-xs-2">
-			</div>
+				<div class="col-xs-2">
+					<a href="">
+						<i class="fa fa-arrow-left fa-3x" id="freccia" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-xs-8">
+					<center>
+						<h2 id="scritta">CLICK&DRINK</h2>
+					</center>
+				</div>
+				<div class="queue col-xs-2">
+					<center>
+						<a href="">CODA</a>
+					</center>
+				</div>
 		</div>
-		<div id="content" class="row">
-			<div id="naslov" class="col-xs-12">
+		<div id="content">
+			<div id="logoCocktail">
 				<center>
 					<i class="fa fa-glass fa-5x"></i><br>
 					<h2>COCKTAIL</h2>
-					<div id="line"></div>
+					<div class="line"></div>
+				</center>
+			</div>
+
 					<div id="cocktailContainer">
 						<!--cocktails
 						<div class="row cocktailDiv">
@@ -123,6 +129,9 @@ if( !checkToken() ){
 						</div>
 						cocktails-->
 					</div>
+
+
+
 					<div id="add" class="row">
 						<center>
 							<a href="">
@@ -130,8 +139,8 @@ if( !checkToken() ){
 							</a>
 						</center>
 					</div>
-				</center>
-			</div>
+				
+
 			<div id="descriptionContainer">
 				
 			</div>
