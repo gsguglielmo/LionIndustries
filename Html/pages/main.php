@@ -52,7 +52,9 @@ if( !checkToken() ){
 				</center>
 			</div>
 			<div class="col-xs-2">
-
+				<a href="">
+					<i class="fa fa-cog fa-3x" id="cog" aria-hidden="true"></i>
+				</a>
 			</div>
 		</div>
 		<div id="logo-field" class="row">

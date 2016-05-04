@@ -62,14 +62,14 @@ if( !checkToken() ){
 	</script>
 	<div class="container-fluid">
 		<div id="topBar" class="row">
-			<div class="queue col-xs-2">
-				<center>
-					<a href="">CODA</a>
-				</center>
+			<div class="col-xs-2">
+				<a href="">
+					<i class="fa fa-arrow-left fa-3x" id="freccia" aria-hidden="true"></i>
+				</a>
 			</div>
 			<div class="col-xs-8">
 				<center>
-					<h2>CLICK&DRINK</h2>
+					<h2 id="scritta">CLICK&DRINK</h2>
 				</center>
 			</div>
 			<div class="col-xs-2">

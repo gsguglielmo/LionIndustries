@@ -30,6 +30,20 @@ html,body,.container-fluid{
 	z-index: 2;
 }
 
+#scritta{
+	margin-top: 15px;
+}
+
+#freccia{
+	margin-top: 8px;
+	color: white;
+}
+
+#cog{
+	margin-top: 8px;
+	color: white;
+}
+
 .queue{
 
   margin-top: 15px;

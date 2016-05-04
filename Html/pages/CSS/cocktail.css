@@ -18,7 +18,7 @@ html,body,.container-fluid{
 	position:fixed;
 	background-color:#5E9FF6;
 	/*ADD BROWSER COMPATIBILITY*/
-	/*-webkit-box-shadow: 7px 7px 10px #fff;*/
+	
 	height: 60px;
 	width: 100%;
 	/*opacity: 0.8;*/
@@ -28,7 +28,17 @@ html,body,.container-fluid{
 	color: white;
 	text-shadow: 2px 2px #000;
 	font: bold;	
+	font-family: 'Oswald', sans-serif;
 	z-index: 2;
+}
+
+#scritta{
+	margin-top: 15px;
+}
+
+#freccia{
+	margin-top: 8px;
+	color: white;
 }
 
 .queue{
