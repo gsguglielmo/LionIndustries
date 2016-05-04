@@ -7,7 +7,7 @@ if( !checkToken() ){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DRINLL MASIN MARK ENA</title>
+	<title>CLICK&DRINK</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link href='../font/oswald.css' rel='stylesheet' type='text/css'>
@@ -69,7 +69,7 @@ if( !checkToken() ){
 			</div>
 			<div class="col-xs-8">
 				<center>
-					<h2>DRINK MACHINE</h2>
+					<h2>CLICK&DRINK</h2>
 				</center>
 			</div>
 			<div class="col-xs-2">
