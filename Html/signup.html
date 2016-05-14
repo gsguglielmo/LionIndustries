@@ -14,6 +14,13 @@
 </head>
 <body>
 	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#methodForm").submit(function(e){
+			e.preventDefault();
+			login();
+		});
+	});
+
 	function login () {
 		var send = "ok";
 		var username = $('#uname').val();
@@ -32,6 +39,7 @@
 			if(result=="OK"){
 				//Se je uspel registrirat
 				alert("registered");
+				location.replace("index.html");
 			}else{
 				//Se ni uspel registrirat
 				alert(result);
@@ -48,7 +56,7 @@
 
 		<div id="content" class="row">
 			<center>
-				<form onsubmit="login();">
+				<form id="methodForm">
 				<div class="row in">
 						<div class="col-xs-12">
 							<input class type="text" id="uname" placeholder="Username">

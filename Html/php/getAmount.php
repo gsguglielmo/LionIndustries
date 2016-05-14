@@ -13,7 +13,12 @@
 	if($count > 0){
 		$row = mysqli_fetch_array($result);
 		setlocale(LC_MONETARY, 'it_IT');
-		echo money_format('%.2n', $row[0]);
+		if(function_exists("money_format")){
+			echo money_format('%.2n', $row[0]);
+		}else{
+			echo $row[0];
+		}
+		
 	}else{
 		echo "Error";
 	}

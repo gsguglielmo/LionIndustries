@@ -52,7 +52,7 @@ if( !checkToken() ){
 				</center>
 			</div>
 			<div class="col-xs-2">
-				<a href="">
+				<a href="setup.php">
 					<i class="fa fa-cog fa-3x" id="cog" aria-hidden="true"></i>
 				</a>
 			</div>

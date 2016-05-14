@@ -13,12 +13,18 @@
 </head>
 <body>
 	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#methodForm").submit(function(e){
+			e.preventDefault();
+			login();
+		});
+	});
+
 	function login () {
 		var send = "ok";
 		var username = $('#usern').val();
 		var password = sha512($('#passf').val());
 		password = sha512(password);
-		//alert(password);
 		$.post("./php/login.php",{sender:send,Username:username,Password:password},function(result) {
 			if(result=="LOGIN OK"){
 				window.location.replace("pages/main.php");
@@ -42,7 +48,7 @@
 					<!--
 						./php/login.php
 					-->
-					<form id="loginForm" onsubmit="login();" method="POST" action="#">
+					<form id="methodForm">
 						<input class type="text" id="usern" name="Username" placeholder="Username"><br></p>
 						<input type="password" id="passf" name="Password" placeholder="Password"><br></p>
 						<input type="submit" name="sender" value="Submit"><br>

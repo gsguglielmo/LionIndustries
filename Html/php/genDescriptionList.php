@@ -5,7 +5,7 @@
 	}
 	$connection = connect();
 	$query = "SELECT * FROM receipeList WHERE 1";
-	$result = mysqli_query($connection,$query) or die("Error");
+	$result = mysqli_query($connection,$query) or die("ErrorB");
 	$count = mysqli_num_rows($result);
 	$final = "";
 	$model = '	<div id="#ID#desc" class="poput">

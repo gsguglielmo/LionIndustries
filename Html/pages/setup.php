@@ -1,3 +1,9 @@
+<?php
+include '../php/functions.php';
+if( !checkToken() ){
+	header('Location: ../');
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +24,7 @@
 	<div class="container-fluid">
 			<div id="topBar" class="row">
 				<div class="col-xs-2">
-					<a href="">
+					<a href="main.php">
 						<i class="fa fa-arrow-left fa-3x" id="freccia" aria-hidden="true"></i>
 					</a>
 				</div>
