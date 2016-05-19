@@ -119,12 +119,22 @@ if( !checkToken() ){
 							<div class="col-xs-2">
 								<i class="info fa fa-info-circle fa-3x" id="rec1"></i>
 							</div>
-							<div id="buy" class="col-xs-2">
+							<div class="buy col-xs-2">
 								<center>
 									<a href="">
 										<i class="fa fa-arrow-right fa-3x" id="rec1"></i>
 									</a>
 								</center>
+							</div>
+						</div>
+						<div class="prezzo row cocktailDiv">
+							<div class="col-xs-10">
+								<center>
+									<h3>PREZZO</h3>
+								</center>
+							</div>
+							<div class="green col-xs-2">
+								
 							</div>
 						</div>
 						cocktails-->
@@ -171,6 +181,31 @@ if( !checkToken() ){
 			description-->		
 
 		</div>
+
+		<div id="confermaContainer">
+			<!--conferma
+			<div id="allert">
+				<div id="allertMessage">
+					<center>Confermi l'acquisto?</center>
+				</div>
+				<div id="allertYesNo" class="row">
+					<div class="col-xs-2"></div>
+					<div class="col-xs-4">
+						<center>
+							<input type="button" class="button" value="SI">
+						</center>
+					</div>
+					<div class="col-xs-4">
+						<center>
+							<input type="button" class="button" value="NO">
+						</center>
+					</div>
+					<div class="col-xs-2"></div>
+				</div>
+			</div>
+			conferma-->	
+		</div>
+
 	</div>
 	<script type="text/javascript">
 		
