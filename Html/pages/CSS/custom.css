@@ -154,3 +154,43 @@ html,body,.container-fluid{
 	margin-top: 16px;
 }
 
+#cocktailName{
+	margin-left: 15px;
+	width:-webkit-calc(100% - 30px);
+	margin-right: 0px;
+	margin-top: 15px;
+	height: 60px;
+	background-color: #5E9FF6;
+}
+
+#name{
+	margin-top: 16px;
+	size:40;
+	width: 80%;
+	border-style: solid;
+	border-color: #323232;
+	color: #323232;
+}
+
+#cocktailDescription{
+	margin-left: 15px;
+	width:-webkit-calc(100% - 30px);
+	margin-right: 0px;
+	margin-top: 15px;
+	height: 240px;
+	background-color: #5E9FF6;
+}
+
+#description{
+	margin-top: 16px;
+	width: 80%;
+	height: 208px;
+	border-style: solid;
+	border-color: #323232;
+	color: #323232;
+}
+
+.title{
+	font-size: 2em;
+	color: #5E9FF6;
+}
