@@ -194,3 +194,12 @@ html,body,.container-fluid{
 	font-size: 2em;
 	color: #5E9FF6;
 }
+
+#price{
+	margin-top: 16px;
+	size:40;
+	width: 80%;
+	border-style: solid;
+	border-color: #323232;
+	color: #323232;
+}
