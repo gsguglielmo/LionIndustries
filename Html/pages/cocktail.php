@@ -39,12 +39,25 @@ if( !checkToken() ){
 		}
 
 		function updateTriggers () {
-			$(".poput").off('click');	
-			$(".poput").click(function(){
+			$("#allert").off('click');	
+			$("#allert").click(function(){
 				$(this).hide('slow');
 			});
 			$(".info").off('click');	
 			$(".info").click(function(){
+				var tmp = $(this).attr('id');
+				$("#"+tmp+"desc").show('slow');
+				//alert("#"+tmp+"desc");
+			});
+		}
+
+		function updateTriggers () {
+			$(".poput").off('click');	
+			$(".poput").click(function(){
+				$(this).hide('slow');
+			});
+			$(".arrow").off('click');	
+			$(".arrow").click(function(){
 				var tmp = $(this).attr('id');
 				$("#"+tmp+"desc").show('slow');
 				//alert("#"+tmp+"desc");
@@ -122,7 +135,7 @@ if( !checkToken() ){
 							<div class="buy col-xs-2">
 								<center>
 									<a href="">
-										<i class="fa fa-arrow-right fa-3x" id="rec1"></i>
+										<i class="arrow fa fa-arrow-right fa-3x" id="rec1"></i>
 									</a>
 								</center>
 							</div>
